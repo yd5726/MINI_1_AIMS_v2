@@ -1,0 +1,114 @@
+@charset "UTF-8";
+:root{
+    --main-color : #000;
+    --sub-color: #D9D9D9;
+    --manager-color : #07690B;
+    --teacher-color : #8600B6;
+    --student-color : #0057FF;
+    --white-color : #FFF;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+header{
+    background-color: var(--main-color);
+}
+/*=========================================
+ header
+===========================================*/
+.Hlogo{
+    color: var(--white-color);
+}
+.Hlogo p{
+    margin-bottom: 0;
+}
+.Hlogo img{
+    background-color: var(--white-color);
+}
+/*=========================================
+ section
+===========================================*/
+/*main-nav*/
+.main-nav ul li{
+    margin: 1rem;
+}
+.main-nav li img{
+    vertical-align: middle;
+}
+/*login*/
+.login-bg{
+    background-image: url("../images/loginBG.png");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.login-input h3{
+    color: var(--white-color);
+    font-size:2rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+.login-input label{
+    padding: .5rem 0;
+}
+.login-btn{
+    width: 15rem;
+    height: 2.75rem;
+    margin: 0 7rem;
+}
+.login-input-main, .login-input-main label{
+    margin: 0 7rem;
+}
+.login-input-sub{
+    text-align: center; 
+    padding: 1rem;
+}
+.login-input-sub li{
+    display: inline-block;
+}
+.login-input-sub li a{
+    color: var(--white-color);
+    font-size: .7rem;
+}
+.login-input-sub li a:nth-child(n){
+    margin:0 1rem;
+}
+#id{
+    background-image: url(../images/id-icon.png);
+    background-repeat: no-repeat;
+    width: 15rem;
+    height: 2.5rem;
+    text-indent: 3rem;
+    background-position: 1rem;
+}
+#pw{
+    background-image: url(../images/pw-icon.png);
+    background-repeat: no-repeat;
+    width: 15rem;
+    height: 2.5rem;
+    text-indent: 3rem;
+    background-position: 1rem;
+}
+/*=========================================
+footer
+===========================================*/
+footer{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.guide-links li a{
+    color: var(--white-color);
+}

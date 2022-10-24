@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나부터 열까지</title>
+    <link href="../images/favicon.png" rel="shortcut icon">
+    <link rel="stylesheet" href="../css/joinS.css">
+    <script src="../jquery/jquery-3.6.1.js"></script>
+</head>
+<body>
+    <h1 class="d-none">From One To Ten</h1>
+    <header>
+        <div class="container">
+            <h2 class="d-none">FOOT: joinS-logo, joinS-title</h2>
+            <div class="Hlogo">
+                <img src="../images/joinS-logo.png" alt="joinS-logo-img">
+            </div>
+            <div class="Htitle">
+                <h2>학생 회원가입</h2>
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+            <nav class="main-nav">
+                <h2 class="d-none">FOOT: main-nav</h2>
+                <ul>
+                    <li>
+                        <a href="joinT.html"><img src="../images/joinT-btn.png" alt="joinT-btn 선생님"></a>
+                    </li>
+                    <li>
+                        <a href="joinS.html"><img src="../images/joinS-btn.png" alt="joinS-btn 학생"></a>
+                    </li>
+                </ul>
+                <div id="ID-picture"><p>증명사진(200x200)</p></div>
+                <input type="file" id="image" accept="image/*" onchange="setIDpicture(event);"/>
+            </nav>
+            <section class="contant">
+                <h2 class="d-none">FOOT: section-contant</h2>
+                <article class="loginForm">
+                    <form action="#" method="post" autocomplete="off" id="loginForm">
+                        <fieldset>
+                        <div class="loginForm-box1">
+                            <h3 class="d-none">FOOT: loginForm-box1</h3>
+                            <h3>이용 약관 동의</h3>
+                            <hr>
+                            <div class="all-agreement">
+                                <h4>전체 동의</h4>
+                                <input type="checkbox" id="chkgroup_Master" onchange="togglecheckboxes(this,'chkgroup')"> 전체 선택
+                                <div class="checkbox-style">
+                                    <label>
+                                        <input type="checkbox" id="cb_1" class="chkgroup">
+                                        {필수} <strong>서비스 이용약관</strong>에 동의합니다.
+                                        <button><a href="#">자세히보기</a></button>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" id="cb_2" class="chkgroup">
+                                        {필수} <strong>개인정보처리방침</strong>에 동의합니다.
+                                        <button><a href="#">자세히보기</a></button>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" id="cb_3" class="chkgroup">
+                                        {선택} <strong>광고성 정보의 수신</strong>에 동의합니다.
+                                    </label>
+                                    <div class="chekcbox-ad" id="cb_4" class="chkgroup">
+                                        <label>
+                                            <input type="checkbox" id="cb_5" class="chkgroup">
+                                            이메일
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="cb_6" class="chkgroup">
+                                            문자
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </fieldset>
+                        <fieldset>
+                        <div class="loginForm-box2">
+                            <h3 class="d-none">FOOT: loginForm-box2</h3>
+                            <h3 class="pInfo-title">개인 정보 입력</h3>
+                            <p>* 필수입력</p>
+                            <hr>
+                            <div class="pInfo-agreement">  
+                                <div class="joinS-name">
+                                    <label for="joinS_Name">이름</label><em>*</em>
+                                    <input type="text" name="joinS-name" id="joinS_Name"
+                                    maxlength="5"
+                                    onkeyup="characterCheck(this)" onkeydown="characterCheck(this)"
+                                    required>
+                                    <span class="d-none">조건 : 이름을 정확하게 입력해주세요.</span>
+                                </div>
+                                <div class="joinS-id">
+                                    <label for="joinS_Id">아이디</label><em>*</em>
+                                    <input type="text" name="joinS-id" id="joinS_Id"
+                                     minlength="4" maxlength="16" required>
+                                    <button><a href="#">중복 확인</a></button>
+                                    <span class="d-none">조건 : {영문소문자, 숫자 4~16자}</span>
+                                </div>
+                                <div class="joinS-pw">
+                                    <label for="joinS_Pw">비밀번호</label><em>*</em>
+                                    <input type="password" name="joinS-pw" id="joinS_Pw"
+                                     minlength="8" maxlength="16" required>
+                                    <span class="d-none">조건 : {영문대소문자/숫자/특수문자
+                                        중 2가지 이상 조합, 8~16자}</span>
+                                </div>
+                                <div class="joinS-email">
+                                    <label for="joinS_Email">이메일</label><em>*</em>
+                                    <input type="email" name="joinS-email" id="joinS_Email"
+                                    placeholder="email@naver.com" required>
+                                    <button><a href="#">중복 확인</a></button>
+                                </div>
+                                <div class="joinS-tel">
+                                    <label for="joinS_Tel">전화번호</label><em>*</em>
+                                    <input type="tel" name="joinS-tel" id="joinS_Tel"
+                                    placeholder="010-8282-5353" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                                    required>
+                                </div>
+                                <div class="joinS-birthday">
+                                    <label for="joinS_Birthday">생년월일</label>
+                                    <input type="date" name="joinS-birthday" id="joinS_Birthday">
+                                </div>
+                                <div class="joinS-parents">
+                                    <label for="joinS_Parents">학부모 전화번호</label>
+                                    <input type="tel" name="joinS-parents" id="joinS_Parents"><br>
+                                    <em>만 14세 미만 학생의 경우 학부모님의 전화번호 기재가 필요합니다.</em>
+                                </div>
+                        </div>
+                        </fieldset>
+                    </form>
+                    <div class="submit-click">
+                        <button><a href="../index.html">취소</a></button>
+                        <input type="submit" value="회원 가입" form="#loginForm">
+                    </div>
+                </article>
+            </section>
+    </div>
+</body>
+<script src="../javascript/joinS.js" type="text/javascript"></script>
+</html>

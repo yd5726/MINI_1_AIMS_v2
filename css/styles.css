@@ -1,0 +1,247 @@
+:root {
+  --bg-white-color: #F9F9F9;
+  --white-color: #FFF;
+  --black-color: #000;
+  --red-color: #F5000A;
+  --yellow-color: #F1C40F;
+  --pink-color: #FF59C7;
+  --gray-color: #B7B7B7;
+
+  --manager-color : #07690B;
+  --teacher-color : #8600B6;
+  --student-color : #0057FF;
+
+  --text-2xl: 64px;
+  --text-xl: 45px;
+  --text-lg: 32px;
+  --text-md: 22px;
+  --text-sm: 16px;
+  --text-sx: 14px;
+  --text-ss: 12px;
+
+  --top-size: 120px;
+}
+
+html {
+  font-size: var(--text-sm);
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-weight: 400;
+  background-color: var(--bg-white-color);
+}
+
+.con-min-width {
+  min-width: 1200px;
+}
+
+.d-none {
+  display: none;
+}
+
+.con {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/*==========================================================
+ header : tob_bar
+ - nav : top_menu_box, toggle_btn
+ - div : toggle_wrap
+============================================================*/
+/*====================================
+header : tob_bar
+======================================*/
+.top_bar {
+  background-color: var(--black-color);
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 999; /*이미지 위로 메뉴*/
+  position: relative;
+}
+
+/*====================================
+nav : top_menu_box
+======================================*/
+.top_menu_box {
+  color: var(--white-color);
+  height: var(--top-size);
+  padding: 0 10px;
+}
+
+.top_menu_box .top_logo {
+  width: 150px;
+}
+
+.top_menu_box>ul>li>a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 25px;
+  /* text-align: center; */
+}
+
+.top_menu_box>ul>li:hover>a {
+  color: var(--black-color);
+  background-color: var(--yellow-color);
+  transition: 0.4s;
+}
+
+/*====================================
+nav : sub_menu
+======================================*/
+.top_menu_box ul>li .sub_menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: none;
+}
+
+.top_menu_box ul>li:hover .sub_menu {
+  display: grid;
+  background-color: beige;
+}
+
+.top_menu_box ul>li>div>div {
+  display: grid;
+  padding: 20px 0;
+}
+
+.top_menu_box ul>li>div div {
+  color: var(--black-color);
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+.top_menu_box ul>li>div .sub_img {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.top_menu_box ul>li>div>div ul li:first-child {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-weight: 500;
+}
+
+.top_menu_box ul>li>div>div ul li a {
+  /* display: block; */
+  font-size: var(--text-sm);
+  letter-spacing: 0.8px;
+}
+
+/*====================================
+nav : toggle_btn[ver.RE-btn style]
+======================================*/
+.toggle_btn {
+  font-size: 24px;
+  color: var(--white-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+/*====================================
+nav : toggle_btn[ver.RE-active style]
+======================================*/
+.toggle_wrap {
+  width: 100%;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.toggle_wrap>.toggle_menu {
+  font-size: var(--text-2xl);
+  display: flex;
+  display: none;
+}
+
+.toggle_wrap>.toggle_menu>li>a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 2px solid black;
+  transition: 0.3s;
+}
+
+.toggle_wrap>.toggle_menu>li:hover>a {
+  color: var(--pink-color);
+}
+
+/*스크롤 탑 버튼[나중에]*/
+
+/*====================================
+main : slider-wrap
+======================================*/
+.slider-wrap {
+  height: 100%;
+  bottom: 30px;
+}
+
+.banner {
+  position: relative;
+}

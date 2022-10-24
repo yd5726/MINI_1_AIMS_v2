@@ -1,0 +1,70 @@
+@media screen and (max-width:1024px) {
+  /*==========================================================
+   header : tob_bar
+  - nav : top_menu_box, toggle_btn
+  - div : toggle_wrap
+  ============================================================*/
+  /*====================================
+  header : tob_bar
+  ======================================*/
+  .top_bar {
+    min-width: 0;
+  }
+  
+  /*====================================
+  nav : top_menu_box
+  ======================================*/
+  .top_menu_box {
+    padding: 0 20px;
+  }
+
+  .top_menu_box>ul {
+    display: none;
+  }
+
+  .toggle_btn {
+    display: block;
+  }
+
+  /*===============================
+  nav : toggle_btn[ver.RE-active]
+  =================================*/
+  .toggle_btn {
+    display: block;
+  }
+
+  .toggle_wrap.active,
+  .toggle_menu.active {
+    display: flex;
+  }
+
+  /*====================================
+  main : slider-wrap
+  ======================================*/
+  .slider-wrap {
+    height: 100%;
+    bottom: 30px;
+  }
+  
+  .banner {
+    position: relative;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  body{
+    display: none;
+  }
+  html::before{
+    content: "Sorry, Our service require 1024px";
+  }
+}
+
+@media screen and (max-width:424px) {
+  body{
+    display: none;
+  }
+  html::before{
+    content: "Sorry, Our service require 1024px";
+  }
+}

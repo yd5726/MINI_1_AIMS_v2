@@ -1,0 +1,275 @@
+@charset "UTF-8";
+:root{
+    --main-color : #000;
+    --sub-color: #D9D9D9;
+    --manager-color : #07690B;
+    --teacher-color : #8600B6;
+    --student-color : #0057FF;
+    --white-color : #FFF;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  color: var(--main-color);
+}
+ul{
+    list-style: none;
+}
+.d-none{
+    display: none;
+}
+.container{
+    max-width: 1190px;
+    height: 115px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap{
+    max-width: 1190px;
+    height: 590px;
+    margin: 0 auto;
+}
+.content {
+    float: left;
+    width: 935px;
+    height: 590px;
+    position: relative;
+}
+/*----------------------popup-------------------------------*/
+#popup{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+}
+.contentP{
+	position: absolute;
+	left: 40%;
+	top: 25%;
+    width: 630px;
+    height: 265px;
+}
+#close{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: black;
+	color: white;
+	right: 0;
+	top: 0;
+	font-size: 2rem;
+    cursor: pointer;
+}
+/*=========================================
+ header : logo, promotion
+===========================================*/
+header{
+    background-color: var(--main-color);
+}
+.Hlogo{
+    display: inline-block;
+    width: 250px;
+    height: 110px;
+    margin-top: 2px;
+}
+.Hpromotion{
+    display: inline-block;
+    width: 930px;
+    height: 110px;
+}
+/*=========================================
+ nav : main-nav
+===========================================*/
+.main-nav{
+    float: left;
+    width: 240px;
+	left: 0px;
+	top: 115px;
+    margin: 1rem .3rem;
+    height: 550px;
+}
+.main-nav li{
+    margin-bottom: 1rem;
+}
+.main-nav li img{
+    vertical-align: middle;
+}
+/*================================================
+ section : indexBG1, indexBG2, loginBG, login-bnt
+==================================================*/
+.indexBG1{
+    float: left;
+}
+.indexBGfont{
+    float: left; 
+    margin: .5rem;
+    margin-top: 250px;
+}
+.indexBG2{
+    float: left;
+}
+.loginBG{
+    float: left;
+    position: relative;
+    background-image: url("../images/loginBG.png");
+    background-repeat: no-repeat;
+    width: 938px; 
+    height: 590px;
+}
+.login-input{
+    position: absolute;
+    top: 5rem;
+    left: 14rem;
+}
+.login-input h3{
+    color: var(--white-color);
+    font-size:2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.login-input input{
+    display: block;
+    margin: .5rem 0;
+}
+.login-bnt{
+    width: 304px;
+    height: 54px;
+}
+.login-input-main{
+    margin: 0 2rem;
+}
+.login-input-sub{
+    text-align: center; 
+    margin-top: 1rem;
+}
+.login-input-sub li{
+    display: inline-block;
+}
+.login-input-sub li a{
+    color: var(--white-color);
+    font-size: .7rem;
+}
+.login-input-sub li a:nth-child(n){
+    margin:0 1rem;
+}
+#id{
+    background-image: url(../images/id-icon.png);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 50px;
+    text-indent: 3rem;
+    background-position: 1rem;
+    font-size: .8rem;
+}
+#pw{
+    background-image: url(../images/pw-icon.png);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 50px;
+    text-indent: 3rem;
+    background-position: 1rem;
+}
+/*---------------item---------------*/
+.item{
+	position: relative;
+	padding: 1rem 0;
+    top: 66.3%;
+}
+.item-wrap{
+    max-width: 1190px;
+    margin: 0 auto;
+    position: relative;
+}
+.prev{
+	position: absolute;
+	color: var(--text-color);
+	border: 1px solid #ccc;
+	padding: 1rem;
+    left: 0;
+    top: 35%;
+    margin-left: .5rem;
+}
+.next{
+	position: absolute;
+	color: var(--text-color);
+	border: 1px solid #ccc;
+	padding: 1rem;
+	right: 0;
+    top: 35%;
+    margin-right: .5rem;
+}
+.carousel{
+	width: 940px;
+	height: 300px;
+	overflow: hidden;
+    margin: 0 auto;
+}
+.carousel div{
+	float: left;
+}
+#posts{
+	height: 250px;
+	width: 300%;
+	transition: all ease-in-out .5s;
+    margin: 1rem;
+}
+.post {
+	width: 940px;
+	height: 250px;
+}
+.post > div{
+	float: left;
+}
+.carousel::after{
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+}
+.attach-txt{
+    margin-left: 1rem;
+}
+/*------------intro-------------------*/
+.article1{
+    margin-bottom: 5rem;
+    margin-top: .5rem;
+}
+.campus-list{
+    display: flex;
+}
+/*=========================================
+footer
+===========================================*/
+footer{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: .3rem 0;
+    height: 115px;
+} 
+.guide-links li{
+    display: inline-block;
+}
+.guide-links li a{
+    color: var(--white-color);
+}
+.guide-links li:nth-child(2){
+	margin: 0 .5rem;
+}
+.guide-links{
+    float: left;
+    padding: 2rem 0;
+}
+footer p{
+    float: right;
+    padding: 2rem 0;
+}
